@@ -39,7 +39,7 @@ COPY template-k8s-logstash.json /elasticsearch/config/templates/template-k8s-log
 COPY config /elasticsearch/config
 
 COPY run.sh /
-COPY elasticsearch_logging_discovery /
+COPY elasticsearch_logging_discovery.go /
 
 RUN useradd --no-create-home --user-group elasticsearch \
     && mkdir /data \
